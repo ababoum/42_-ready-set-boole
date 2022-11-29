@@ -10,8 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-use ast::parse;
+use rsb::ast::eval_formula;
 
 fn main() {
-	println!("10& => {}", eval_formula("10&"));
+    println!("10& => {}", eval_formula("10&"));
+	println!("10| => {}", eval_formula("10|"));
+	println!("10|1& => {}", eval_formula("10|1&"));
+	println!("101|& => {}", eval_formula("101|&"));
+	println!("11> => {}", eval_formula("11>"));
+	println!("10= => {}", eval_formula("10="));
+	println!("1011||= => {}", eval_formula("1011||="));
 }
